@@ -1,0 +1,25 @@
+db.company_driver.insertMany([
+    {
+    drivers:["John","Mohan"],
+      start_date:1,
+      end-date:31
+    },
+     {
+        drivers:["LITTLE","Big"],
+      start_date:15,
+      end-date:31
+    },
+     {
+        drivers:["Virat","Kumar"],
+      start_date:15,
+      end-date:30
+    },
+     {
+         drivers:["Raj","Yasar"],
+      start_date:14,
+      end-date:30
+    },
+    
+])
+
+db.company_driver.find($and:[{start_date:{$gte:15}},{end_date:{$lte:31}}],{drivers:1,_id:0})

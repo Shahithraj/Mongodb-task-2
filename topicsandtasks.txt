@@ -1,0 +1,22 @@
+db.topics.insertMany([
+    {
+        id:"1",
+        month:"September",
+        topic:["HTML","CSS"],
+        task:["Creating Form using HTML","Some CSS tasks"]
+    },
+     {
+        id:"2",
+        month:"October",
+        topic:["JavaScript","ReactJs"],
+         task:["Pagination","form","Calculator"]
+    },
+     {
+        id:"3",
+        month:"November",
+        topic:["NodeJS","Mongodb"],
+        task:["NodeJS task","Mongodb task"]
+    },
+])
+
+db.topics.find({month:"October"},{_id:0,topic:1,task:1})

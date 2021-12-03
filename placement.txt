@@ -1,0 +1,14 @@
+db.placement.insertMany([
+    {
+    isAppeared:true,
+    drivers:["John","Mohan"],
+    student:["Raj","Ram"]
+    },
+     {
+    isAppeared:false,
+    drivers:["Little","Fat"],
+    student:["Ravi","Ragul"]
+    },
+])
+
+db.placement.find({isAppeared:true})

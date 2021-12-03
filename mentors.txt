@@ -1,0 +1,25 @@
+db.mentors.insertMany([
+    {
+        mentors:["John","Mohan"],
+        mentee'sCount:10
+    },
+     {
+        mentors:["Little","Big"],
+        mentee'sCount:5
+    },
+     {
+        mentors:["Virat","Kumar"],
+        mentee'sCount:15
+    },
+     {
+         mentors:["Raj","Yasar"],
+        mentee'sCount:70
+    },
+     {
+         mentors:["Ram","Jagan"],
+        mentee'sCount:20
+    },
+    
+])
+
+db.mentors.find({ mentee'sCount:{$gt:15}},{mentors:1})

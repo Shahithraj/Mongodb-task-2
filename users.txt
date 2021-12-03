@@ -1,0 +1,33 @@
+db.user.insertMany([
+    {
+    start_date:15,
+    end-date:31,
+    isAbsent:true,
+    isTaskFinished:true,
+    users : 10
+    },
+      {
+    start_date:15,
+    end-date:31,
+    isAbsent:false,
+    isTaskFinished:false,
+    users : 20
+    },
+      {
+    start_date:15,
+    end-date:31,
+    isAbsent:false,
+    isTaskFinished:true,
+    users : 30
+    },
+      {
+    start_date:14,
+    end-date:31,
+    isAbsent:true,
+    isTaskFinished:true,
+    users : 40
+    },
+    
+])
+
+db.user.find({$and:[{start_date:{$gte:15}},{end_date:{$lte:31}},{isAbsent:false},{isTaskFinished:false}],{users:1})
